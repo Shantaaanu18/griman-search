@@ -63,7 +63,16 @@ export default function SearchPage() {
             </Button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div 
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "24px",
+              maxWidth: "800px",
+              margin: "40px auto 0",
+              width: "100%"
+            }}
+          >
             {results.map((u) => (
               <UserCard key={u.id} user={u} />
             ))}

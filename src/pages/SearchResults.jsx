@@ -43,7 +43,10 @@ export default function SearchResults() {
   };
 
   return (
-    <div className="min-h-screen" style={{ background: "linear-gradient(to bottom, #FFFFFF, #B1CBFF)" }}>
+    <div
+      className="min-h-screen"
+      style={{ background: "linear-gradient(to bottom, #FFFFFF, #B1CBFF)" }}
+    >
       {/* Search Bar */}
       <div className="max-w-3xl mx-auto pt-10">
         <input
@@ -57,7 +60,7 @@ export default function SearchResults() {
       </div>
 
       {/* Results Section */}
-      <div className="max-w-6xl mx-auto px-4" style={{ marginTop: 40 }}>
+      <div style={{ marginTop: 40 }}>
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center py-16 opacity-80">
             <img
@@ -75,23 +78,21 @@ export default function SearchResults() {
             </button>
           </div>
         ) : (
-          <div
-  className="grid"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 240px)", // FORCE 2 columns with fixed width
-    gap: "22px",                    // 22px gap between cards
-    maxWidth: "502px",              // make sure only 2 cards fit nicely (240px + 22px + 240px)
-    margin: "40px auto 0",          // 40px top margin (from search bar)
-    width: "100%",
-    justifyContent: "center"
-  }}
->
-  {filtered.map((user, idx) => (
-    <UserCard key={idx} user={user} />
-  ))}
-</div>
-
+          <div 
+            id="custom-grid-container"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "24px",
+              maxWidth: "600px",
+              margin: "40px auto 0",
+              width: "100%"
+            }}
+          >
+             {filtered.slice(0, 2).map((user, idx) => (
+               <UserCard key={idx} user={user} />
+             ))}
+          </div>
         )}
       </div>
     </div>

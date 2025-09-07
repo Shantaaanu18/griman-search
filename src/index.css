@@ -10,3 +10,12 @@ body {
   @apply bg-white text-gray-900;
   font-family: 'Inter', sans-serif;
 }
+
+#custom-grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+  max-width: 600px !important;
+  margin: 40px auto 0 !important;
+  width: 100% !important;
+}
