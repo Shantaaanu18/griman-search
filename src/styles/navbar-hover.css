@@ -1,0 +1,11 @@
+nav a,
+nav .font-semibold {
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  text-underline-offset: 4px;
+}
+nav a:hover,
+nav .font-semibold:hover {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
