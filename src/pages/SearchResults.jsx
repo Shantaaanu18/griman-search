@@ -47,7 +47,7 @@ export default function SearchResults() {
       className="min-h-screen"
       style={{ background: "linear-gradient(to bottom, #FFFFFF, #B1CBFF)" }}
     >
-      {/* Search Bar */}
+      
       <div className="max-w-3xl mx-auto pt-10">
         <input
           type="text"
@@ -59,7 +59,7 @@ export default function SearchResults() {
         />
       </div>
 
-      {/* Results Section */}
+      
       <div style={{ marginTop: 40 }}>
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center py-16 opacity-80">
